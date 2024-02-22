@@ -1,0 +1,49 @@
+Problem 1
+
+Algorithm Steps:
+
+Students Propose:
+Initialize M to empty matching
+While (there are unmatched students and some hospital has not proposed to every student) {
+    Each student proposes to the next hospital on their list
+    If a hospital has less than k students on its acceptance list, it accepts
+    If a hospital has k students in its acceptance, compare with the hospital's preference list. If the proposing student has a higher preference than the lowest ranked student for the hospital, the hospital replaces that student with the proposing student.
+}
+Repeat until End
+
+Hospitals Propose:
+Initialize M to empty matching
+While (there are unmatched students and some hospital has not proposed to every student) {
+    Each hospital proposes to the next student on their list if they have less than k students
+    If student has not yet matched, it accepts
+    If the student already has matched, compare with it's preference list, and accept if it preferred.
+}
+Repeat until end
+
+//DO THE MATCHING NOW
+
+Problem 2
+
+Problem 3
+
+Let's use proof by contradiction to prove that in a Gale-Shapley it is not possible for more than one candidate to get their last choice. Assume we are matching candidates and companies, with the candidates proposing.
+Assume there are 2 candidates, Candidate A and Candidate B who are both matched to their last choice companies.
+
+Consider the Gale-Shapley Algorithm. In this algorithm, candidates propose to their preferred companies, and companies accept candidates based on their preferences. In a series of rounds, an candidate may propose to a company if they have not been accepted by a more preferred company yet. The company, on the other hand, can accept candidates based on their preferences, but they may change their minds if they receive a proposal from a more preferred candidate in a later round.
+
+Given that both Candidate A and Candidate B are matched to their last choices, it means that there are no companies that prefer these candidates over any others they have accepted so far. If there were companies that preferred Candidate A or Candidate B over others, they would have accepted them and would not have ended up with their last choices.
+
+Now, let's consider Candidate A. Since Candidate A is matched to their last choice, it means that there are no other colleges that prefer Candidate A over their current assignment. Otherwise, if there were such companies, Applicant A would have proposed to them and would have been accepted by a more preferred company.
+
+The same logic applies to Candidate B. Since Company B is also matched to their last choice, there are no other companies that prefer Candidate B over their current assignment.
+
+However, this creates a contradiction because both Candidate A and Candidate B cannot be the least preferred applicants for all companies. If they were, then all other applicants would have been matched to companies they prefer more than Candidate A and Candidate B, which is not possible in a stable matching.
+
+Therefore, the assumption that more than one candidate gets their last choice in the Gale-Shapley Algorithm leads to a contradiction. Hence, it is not possible for more than one candidate to get their last choice in the final stable matching produced by the Gale-Shapley Algorithm.
+
+Problem 4
+
+Problem 5
+
+
+Problem 6
